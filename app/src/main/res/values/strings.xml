@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">VideoPlayer</string>
+    <string name="not_played_yet">Not played yet</string>
+    <string name="most_viewed">Most Viewed</string>
+    <string name="last_viewed">Last Viewed</string>
+    <string name="no_history_found">No History Found</string>
+</resources>
