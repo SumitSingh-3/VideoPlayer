@@ -123,7 +123,7 @@ class PlayerFragment : Fragment() {
             }
         })
 
-        binding.chipGroup.setOnCheckedChangeListener { group, checkedIds ->
+        binding.chipGroup.setOnCheckedChangeListener { _, checkedIds ->
             when (checkedIds) {
                 R.id.chip_most_viewed -> {
                     viewModel.getVideoFromHistory(VideoHistoryFilter.MOST_VIEWED)

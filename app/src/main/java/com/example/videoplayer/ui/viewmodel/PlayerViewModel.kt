@@ -38,7 +38,7 @@ class PlayerViewModel @Inject constructor(
     private val _videoHistoryUiState by lazy { MutableLiveData<List<PexelsVideoMapedData>>() }
     val videoHistoryUiState: LiveData<List<PexelsVideoMapedData>> by lazy { _videoHistoryUiState }
 
-    var currentFilter: VideoHistoryFilter = VideoHistoryFilter.LAST_PLAYED
+    private var currentFilter: VideoHistoryFilter = VideoHistoryFilter.LAST_PLAYED
 
     private val _videoPlayerExpanded by lazy { MutableLiveData(false) }
     val videoPlayerExpanded: LiveData<Boolean> by lazy { _videoPlayerExpanded }
@@ -100,7 +100,7 @@ class PlayerViewModel @Inject constructor(
         }
     }
 
-    fun updatePlayerVideoState(status: Boolean){
+    fun updatePlayerVideoState(status: Boolean) {
         _videoPlayerExpanded.postValue(status)
     }
 

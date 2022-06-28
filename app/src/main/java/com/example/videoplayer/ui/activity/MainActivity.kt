@@ -1,12 +1,10 @@
 package com.example.videoplayer.ui.activity
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelLazy
-import androidx.navigation.findNavController
 import com.example.datalib.utils.StateConstant
 import com.example.videoplayer.R
 import com.example.videoplayer.databinding.ActivityMainBinding
@@ -36,8 +34,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         activityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-
-//        setupPlayScreenFragment()
 
         callInitialApiCall()
         observeViewModel()
