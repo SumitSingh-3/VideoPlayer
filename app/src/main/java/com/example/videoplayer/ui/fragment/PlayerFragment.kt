@@ -33,7 +33,9 @@ class PlayerFragment : Fragment() {
     )
 
     private val videoListAdapter by lazy {
-        VideoListAdapter(AdapterType.HISTORY_LIST, ::onDeleteVide) {}
+        VideoListAdapter(AdapterType.HISTORY_LIST, ::onDeleteVide) {
+            viewModel.playVideo(it)
+        }
     }
 
     override fun onCreateView(

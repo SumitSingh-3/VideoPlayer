@@ -37,10 +37,11 @@ class VideoListAdapter(
             binding.item = data
 
             binding.root.setOnClickListener {
+                onClick.invoke(data)
                 if (listType == AdapterType.API_LIST) {
                     data.isSelected = true
                     notifyItemChanged(bindingAdapterPosition)
-                    onClick.invoke(data)
+//                    onClick.invoke(data)
 
                     if (selectedItem != -1) {
                         videoList[selectedItem].isSelected = false
